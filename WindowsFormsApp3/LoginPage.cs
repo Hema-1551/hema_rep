@@ -26,8 +26,8 @@ namespace WindowsFormsApp3
         }
         private void label4_Click(object sender, EventArgs e)
         {
-            string abc = File.ReadAllText(path);
-            if (abc == null)
+         //  string abc = File.ReadAllText(path);
+            if (!File.Exists(path))
             {
                 this.Hide();
                 NewSignUp signup = new NewSignUp();

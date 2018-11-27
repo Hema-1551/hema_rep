@@ -58,17 +58,22 @@ namespace WindowsFormsApp3
             if (bonus > 100)
             {
                 bonus = 100;
-            progressBar1.Value = bonus;
+           // progressBar1.Value = bonus;
+                bunifuProgressBar1.Value = bonus;
 
             }
             else if(bonus<1)
             {
                 bonus = 1;
-                progressBar1.Value = bonus;
+              //  progressBar1.Value = bonus;
+                bunifuProgressBar1.Value = bonus;
+
             }
             else
             {
-                progressBar1.Value = bonus;
+               // progressBar1.Value = bonus;
+                bunifuProgressBar1.Value = bonus;
+
             }
             label2.Text = Convert.ToString(bonus)+"%";
             // COMPLEXITY
@@ -236,10 +241,7 @@ namespace WindowsFormsApp3
 
             return count;
         }
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-            progressBar1.Value = bonus;
-        }
+       
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -255,7 +257,10 @@ namespace WindowsFormsApp3
         private void backgroundWorker1_ProgresssChange(object sender, ProgressChangedEventArgs e)
         {
             // Change the value of the ProgressBar
-        progressBar1.Value = e.ProgressPercentage;
+       // progressBar1.Value = e.ProgressPercentage;
+      
+            bunifuProgressBar1.Value = e.ProgressPercentage;
+
         }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -283,6 +288,16 @@ namespace WindowsFormsApp3
         private void label6_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void bunifuProgressBar1_progressChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

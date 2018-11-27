@@ -68,8 +68,9 @@ namespace WindowsFormsApp3
            string s= File.ReadAllText(path);
             string auth1, auth2;
             string[] PartsOfReadText = Regex.Split(s, "\r\a");
-           
+            MessageBox.Show(PartsOfReadText[0]+ PartsOfReadText[1]+ PartsOfReadText[2]+ PartsOfReadText[3]);
             string qwe = (PartsOfReadText[2]);
+           
             auth1 = Carrev(qwe);
             auth1 = Reverse(auth1);
             auth2 = Carrev(PartsOfReadText[3]);
@@ -117,11 +118,5 @@ namespace WindowsFormsApp3
                 bunifuMaterialTextbox2.Text = "";
             }
         }
-        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-      
     }
 }

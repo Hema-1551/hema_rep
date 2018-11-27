@@ -11,18 +11,7 @@ namespace WindowsFormsApp3
             Password = Pwd;
             InitializeComponent();
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
         
-            Clipboard.SetText(Password);
-            this.Dispose();
-        
-        }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            textBox1.Text += Password;
-        }
-
         private void label5_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -33,6 +22,18 @@ namespace WindowsFormsApp3
         private void label1_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(Password);
+            this.Dispose();
+        }
+
+        private void bunifuThinButton25_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += Password;
+
         }
     }
 }

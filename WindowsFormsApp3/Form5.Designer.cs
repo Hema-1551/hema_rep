@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,37 +41,30 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuProgressBar1 = new Bunifu.Framework.UI.BunifuProgressBar();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(54, 51);
+            this.label1.Location = new System.Drawing.Point(58, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 23);
+            this.label1.Size = new System.Drawing.Size(153, 27);
             this.label1.TabIndex = 1;
             this.label1.Text = "Enter Password";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(275, 55);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.textBox1.Location = new System.Drawing.Point(265, 73);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 20);
+            this.textBox1.Size = new System.Drawing.Size(187, 24);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.progressBar1.ForeColor = System.Drawing.Color.White;
-            this.progressBar1.Location = new System.Drawing.Point(160, 144);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(238, 37);
-            this.progressBar1.TabIndex = 4;
-            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // backgroundWorker1
             // 
@@ -83,33 +75,35 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label2.BackColor = System.Drawing.Color.Lime;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(269, 155);
+            this.label2.Location = new System.Drawing.Point(262, 160);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 13);
+            this.label2.Size = new System.Drawing.Size(25, 15);
             this.label2.TabIndex = 5;
             this.label2.Text = "0%";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(150, 204);
+            this.label3.Location = new System.Drawing.Point(131, 208);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 23);
+            this.label3.Size = new System.Drawing.Size(111, 27);
             this.label3.TabIndex = 6;
             this.label3.Text = "Complexity";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(319, 205);
+            this.label4.Location = new System.Drawing.Point(302, 208);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 23);
+            this.label4.Size = new System.Drawing.Size(105, 27);
             this.label4.TabIndex = 7;
             this.label4.Text = "Too Short";
             // 
@@ -117,7 +111,7 @@
             // 
             this.checkBox1.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(294, 95);
+            this.checkBox1.Location = new System.Drawing.Point(294, 103);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(63, 24);
             this.checkBox1.TabIndex = 8;
@@ -168,6 +162,25 @@
             this.label6.Text = " -";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 54;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // bunifuProgressBar1
+            // 
+            this.bunifuProgressBar1.BackColor = System.Drawing.Color.White;
+            this.bunifuProgressBar1.BorderRadius = 8;
+            this.bunifuProgressBar1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bunifuProgressBar1.Location = new System.Drawing.Point(145, 150);
+            this.bunifuProgressBar1.MaximumValue = 100;
+            this.bunifuProgressBar1.Name = "bunifuProgressBar1";
+            this.bunifuProgressBar1.ProgressColor = System.Drawing.Color.Lime;
+            this.bunifuProgressBar1.Size = new System.Drawing.Size(262, 35);
+            this.bunifuProgressBar1.TabIndex = 32;
+            this.bunifuProgressBar1.Value = 0;
+            this.bunifuProgressBar1.progressChanged += new System.EventHandler(this.bunifuProgressBar1_progressChanged);
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,11 +194,12 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.bunifuProgressBar1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form5";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Test Password Strength";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -195,7 +209,6 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -205,5 +218,7 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuProgressBar bunifuProgressBar1;
     }
 }

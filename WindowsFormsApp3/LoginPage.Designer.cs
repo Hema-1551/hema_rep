@@ -120,7 +120,7 @@
             this.bunifuLabel4.CursorType = null;
             this.bunifuLabel4.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.bunifuLabel4.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.bunifuLabel4.Location = new System.Drawing.Point(68, 266);
+            this.bunifuLabel4.Location = new System.Drawing.Point(60, 266);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel4.Size = new System.Drawing.Size(28, 47);
@@ -326,6 +326,7 @@
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginPage";
             this.bunifuGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();

@@ -27,33 +27,24 @@ namespace WindowsFormsApp3
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void Form3_Load(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            radioButton1.Checked = true;
-            checkBox3.Checked = true;
+
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
-            string t = textBox2.Text;
-            foreach( char ch in t)
-            {
-                if (Char.IsDigit(ch))
-                {
-                }
-                else
-                {
-                    MessageBox.Show("Length must be in Numerics");
-                }
-            }
+
         }
-        private void button2_Click(object sender, EventArgs e)
+
+        private void label7_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+
         }
-        private void button1_Click(object sender, EventArgs e)
+
+        private void bunifuThinButton25_Click(object sender, EventArgs e)
         {
-            genNum = string.Empty; alphabetLower = string.Empty; alphabetUpper = string.Empty; specialChars = string.Empty; Pwd =string.Empty;
+            genNum = string.Empty; alphabetLower = string.Empty; alphabetUpper = string.Empty; specialChars = string.Empty; Pwd = string.Empty;
             LengthPass = 0;
             // Generate Numbers Function
             String GenNumbers(int min, int max)
@@ -110,7 +101,7 @@ namespace WindowsFormsApp3
             catch
             {
                 MessageBox.Show("Length Cannot Be Empty");
-              
+
             }
 
             //FIRST CHARACTER CHARACTER CODE
@@ -132,14 +123,14 @@ namespace WindowsFormsApp3
             }
             //LATER CHARACTERS CODE
             string a, b, c, d;
-            a =Convert.ToString(Convert.ToInt32(checkBox1.Checked));
+            a = Convert.ToString(Convert.ToInt32(checkBox1.Checked));
             b = Convert.ToString(Convert.ToInt32(checkBox2.Checked));
             c = Convert.ToString(Convert.ToInt32(checkBox3.Checked));
             d = Convert.ToString(Convert.ToInt32(checkBox4.Checked));
 
             int choice = Convert.ToInt32(a + b + c + d);
-            
-            switch(choice)
+
+            switch (choice)
             {
                 case 0000:
                     MessageBox.Show("Please Select Check Boxes You Require");
@@ -153,21 +144,21 @@ namespace WindowsFormsApp3
                 case 0010:
                     for (int i = 0; i < (LengthPass - 1); i++)
                     {
-                        latterPass += GenNumbers(0,9);
+                        latterPass += GenNumbers(0, 9);
                     }
                     break;
                 case 0011:
                     for (int i = 0; i < (LengthPass - 1); i++)
                     {
-                        int multiple = random.Next(1,3);
-                       
+                        int multiple = random.Next(1, 3);
+
                         if (multiple == 1)
                         {
-                                latterPass += GenNumbers(0, 9);
+                            latterPass += GenNumbers(0, 9);
                         }
                         else
                         {
-                           latterPass += GenSpecialChars(0, 3); 
+                            latterPass += GenSpecialChars(0, 3);
                         }
                     }
                     break;
@@ -176,7 +167,7 @@ namespace WindowsFormsApp3
                     {
                         latterPass += GenAlphabetsLower(97, 122);
                     }
-                     break;
+                    break;
                 case 0101:
                     for (int i = 0; i < (LengthPass - 1); i++)
                     {
@@ -193,7 +184,7 @@ namespace WindowsFormsApp3
 
                     break;
                 case 0110:
-                     for (int i = 0; i < (LengthPass - 1); i++)
+                    for (int i = 0; i < (LengthPass - 1); i++)
                     {
                         int multiple = random.Next(1, 3);
 
@@ -203,37 +194,37 @@ namespace WindowsFormsApp3
                         }
                         else
                         {
-                            latterPass += GenNumbers(0,9);
+                            latterPass += GenNumbers(0, 9);
                         }
                     }
-                         break;
+                    break;
                 case 0111:
                     for (int i = 0; i < (LengthPass - 1); i++)
                     {
                         int multiple = random.Next(1, 4);
-                        switch(multiple)
+                        switch (multiple)
                         {
                             case 1:
                                 latterPass += GenAlphabetsLower(97, 122);
 
                                 break;
                             case 2:
-                                latterPass += GenNumbers(0,9);
+                                latterPass += GenNumbers(0, 9);
 
                                 break;
                             case 3:
-                                latterPass += GenSpecialChars(0,3);
+                                latterPass += GenSpecialChars(0, 3);
 
                                 break;
                         }
                     }
-                        break;
+                    break;
                 case 1000:
                     for (int i = 0; i < (LengthPass - 1); i++)
                     {
-                        latterPass += GenAlphabetsUpper(65,90);
+                        latterPass += GenAlphabetsUpper(65, 90);
                     }
-                     break;
+                    break;
                 case 1001:
                     for (int i = 0; i < (LengthPass - 1); i++)
                     {
@@ -260,7 +251,7 @@ namespace WindowsFormsApp3
                         }
                         else
                         {
-                            latterPass += GenNumbers(0,9);
+                            latterPass += GenNumbers(0, 9);
                         }
                     }
                     break;
@@ -336,7 +327,7 @@ namespace WindowsFormsApp3
 
                                 break;
                             case 3:
-                                latterPass += GenNumbers(0,9);
+                                latterPass += GenNumbers(0, 9);
 
                                 break;
                         }
@@ -365,11 +356,11 @@ namespace WindowsFormsApp3
                                 break;
                         }
                     }
-                   break;
+                    break;
             }
 
             Pwd = firstchara + latterPass;
-            
+
             if (Convert.ToBoolean(LengthPass))
             {
                 Form4 GeneratedPassword = new Form4(Pwd);
@@ -380,6 +371,31 @@ namespace WindowsFormsApp3
             {
                 Form3 gn = new Form3();
             }
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            radioButton1.Checked = true;
+            checkBox3.Checked = true;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            string t = textBox2.Text;
+            foreach( char ch in t)
+            {
+                if (Char.IsDigit(ch))
+                {
+                }
+                else
+                {
+                    textBox2.Text = null;
+                }
+            }
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

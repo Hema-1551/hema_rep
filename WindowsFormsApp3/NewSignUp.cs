@@ -138,6 +138,16 @@ namespace WindowsFormsApp3
 
         }
 
+        private void bunifuMaterialTextbox1_OnValueChanged_1(object sender, EventArgs e)
+        {
+            bunifuMaterialTextbox2.isPassword = true;
+        }
+
+        private void bunifuMaterialTextbox2_OnValueChanged_1(object sender, EventArgs e)
+        {
+            bunifuMaterialTextbox1.isPassword = true;
+        }
+
         byte[] Encrypt(string plainText1, byte[] Key, byte[] IV)
             {
                 byte[] encrypted;
@@ -222,8 +232,6 @@ namespace WindowsFormsApp3
                 PassEncrypt = returnedPass[0];
                 PassDecrypt = returnedPass[1];
                 PassDecrypt = Reverse(PassDecrypt);
-
-                
                 writingText = PassEncrypt + "\r\a" + CharAdd(PassDecrypt);
                 File.WriteAllText(path, writingText.ToString());
                 bunifuThinButton21.Location = new Point(160, 365);//pont to be changes
@@ -231,7 +239,7 @@ namespace WindowsFormsApp3
                 bunifuMaterialTextbox2.Location = new Point(69, 274);
                 //bunifuCustomLabel2.Font.Size();
                 bunifuCustomLabel1.Location = new Point(120, 162);
-
+                bunifuMaterialTextbox3.BackColor = Color.AliceBlue;
                 bunifuCustomLabel2.Location = new Point(171, 432);
                 bunifuCustomLabel2.ForeColor = Color.White;
                 bunifuCustomLabel2.BackColor = Color.DeepSkyBlue;

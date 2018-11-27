@@ -38,6 +38,7 @@
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton25 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.SuspendLayout();
             // 
             // toolTip2
@@ -53,11 +54,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(726, 2);
+            this.label2.Location = new System.Drawing.Point(715, -1);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 28);
+            this.label2.Size = new System.Drawing.Size(39, 44);
             this.label2.TabIndex = 32;
             this.label2.Text = " -";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -67,7 +68,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(756, 2);
+            this.label5.Location = new System.Drawing.Point(752, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 28);
             this.label5.TabIndex = 33;
@@ -92,10 +93,10 @@
             this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.DeepSkyBlue;
             this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(42, 103);
+            this.bunifuThinButton22.Location = new System.Drawing.Point(42, 96);
             this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(183, 117);
+            this.bunifuThinButton22.Size = new System.Drawing.Size(183, 133);
             this.bunifuThinButton22.TabIndex = 36;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
@@ -118,10 +119,10 @@
             this.bunifuThinButton24.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.DeepSkyBlue;
             this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton24.Location = new System.Drawing.Point(310, 103);
+            this.bunifuThinButton24.Location = new System.Drawing.Point(310, 97);
             this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.bunifuThinButton24.Name = "bunifuThinButton24";
-            this.bunifuThinButton24.Size = new System.Drawing.Size(183, 117);
+            this.bunifuThinButton24.Size = new System.Drawing.Size(183, 132);
             this.bunifuThinButton24.TabIndex = 39;
             this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton24.Click += new System.EventHandler(this.bunifuThinButton24_Click);
@@ -144,10 +145,10 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.DeepSkyBlue;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(567, 103);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(567, 97);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(183, 117);
+            this.bunifuThinButton21.Size = new System.Drawing.Size(183, 132);
             this.bunifuThinButton21.TabIndex = 40;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
@@ -204,6 +205,11 @@
             this.bunifuThinButton25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton25.Click += new System.EventHandler(this.bunifuThinButton25_Click);
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 54;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,6 +226,7 @@
             this.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = " Welcome to Password Mangement";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -235,6 +242,7 @@
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton25;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }
 

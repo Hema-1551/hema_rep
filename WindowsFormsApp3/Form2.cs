@@ -125,20 +125,20 @@ namespace WindowsFormsApp3
             redirect.ShowDialog();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void label3_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
             slno = 0;
-            dataGridView1.Rows.Clear();
+            bunifuCustomDataGrid1.Rows.Clear();
             Retrievedata = File.ReadAllText(path);
             string LengthsData = File.ReadAllText(Lengthpath);
 
@@ -214,16 +214,16 @@ namespace WindowsFormsApp3
         {
           if (checkBox2.Checked)
             {
-                for (int i = 0; i < dataGridView1.RowCount; i++)
+                for (int i = 0; i < bunifuCustomDataGrid1.RowCount; i++)
                 {
-                    dataGridView1.Rows[i].Cells[2].Value = "";
+                    bunifuCustomDataGrid1.Rows[i].Cells[2].Value = "";
                 }
             }
             else
             {
-                for (int i = 0; i < dataGridView1.RowCount - 1; i++)
+                for (int i = 0; i < bunifuCustomDataGrid1.RowCount - 1; i++)
                 {
-                    dataGridView1.Rows[i].Cells[2].Value = abc[i];
+                    bunifuCustomDataGrid1.Rows[i].Cells[2].Value = abc[i];
                 }
             }
            
@@ -287,17 +287,17 @@ namespace WindowsFormsApp3
             try
             {
                 string[] rowentery = { Convert.ToString(slno), domain, password, dateAndTime };
-                dataGridView1.Rows.Add(rowentery);
+                bunifuCustomDataGrid1.Rows.Add(rowentery);
                
                 textBox1.Text = null; textBox2.Text = null;
                 slno++;
-              for (int i = 0; i < dataGridView1.RowCount-1; i++)
+              for (int i = 0; i < bunifuCustomDataGrid1.RowCount-1; i++)
                 {
-                    abc[i] = Convert.ToString(dataGridView1.Rows[i].Cells[2].Value);
+                    abc[i] = Convert.ToString(bunifuCustomDataGrid1.Rows[i].Cells[2].Value);
                 }
             }
             catch(Exception Ex) 
-            {
+            {   
                 MessageBox.Show(Ex.Message);
             }
         }
@@ -311,7 +311,7 @@ namespace WindowsFormsApp3
             string ADecrypt = str.Substring(finalBencrypted.Length + finalBdecrypted.Length + finalD_encrypted.Length + finalD_decrypted.Length + finalAencrypt.Length, finalAdecrypt.Length);
             ADecrypt = Reverse(ADecrypt);
             if (textBox1.Text != "" && textBox2.Text != "")
-            {
+            { 
                 DataEntries(ADecrypt, BDecrypt, da);
             }
         }
