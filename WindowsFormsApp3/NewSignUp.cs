@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography;
 using System.IO;
-
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp3
@@ -9,9 +9,62 @@ namespace WindowsFormsApp3
     public partial class NewSignUp : Form
     {
         private string[] returnedPass= { "1", "2" };
-        string path = "", password = "", decrypted,IdEncrypt, IdDecrypt , PassEncrypt, PassDecrypt ,writingText= ""; byte[] encrypted;
+        string path = "", password = "", decrypted, PassEncrypt, PassDecrypt ,writingText= ""; byte[] encrypted;
 
         AesManaged aes = new AesManaged();
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LoginPage redirect = new LoginPage();
+            redirect.ShowDialog();
+        }
+
+        private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
+        {
+            bunifuMaterialTextbox1.isPassword = true;
+        }
+
+        private void bunifuMaterialTextbox2_OnValueChanged(object sender, EventArgs e)
+        {
+            bunifuMaterialTextbox2.isPassword = true;
+        }
+        private void bunifuMaterialTextbox1_Leave(object sender, EventArgs e)
+        {
+            if (bunifuMaterialTextbox1.Text == "")
+            {
+                bunifuMaterialTextbox1.Text = "Enter your password";
+                bunifuMaterialTextbox1.ForeColor = Color.Gray;
+                bunifuMaterialTextbox1.isPassword = false;
+
+            }
+        }
+
+        private void bunifuMaterialTextbox2_Enter(object sender, EventArgs e)
+        {
+            if (bunifuMaterialTextbox2.Text == "ReEnter your password")
+            {
+                bunifuMaterialTextbox2.Text = "";
+            }
+        }
+        private void bunifuMaterialTextbox2_Leave(object sender, EventArgs e)
+        {
+            if (bunifuMaterialTextbox2.Text == "")
+            {
+                bunifuMaterialTextbox2.Text = "ReEnter your password";
+                bunifuMaterialTextbox2.ForeColor =Color.Gray;
+                bunifuMaterialTextbox2.isPassword = false;
+
+            }
+        }
+
+        private void bunifuMaterialTextbox1_Enter(object sender, EventArgs e)
+        {
+            if (bunifuMaterialTextbox1.Text == "Enter your password")
+            {
+                bunifuMaterialTextbox1.Text = "";
+            }
+        }
 
         public NewSignUp()
         {
@@ -54,12 +107,38 @@ namespace WindowsFormsApp3
             return crypt;
         }
 
+        string[] Questions = { "", "" };
+        private void bunifuCustomLabel3_Click(object sender, EventArgs e)
+        {
+            string[] EncryptDecrypt = EncryptAesManaged(bunifuMaterialTextbox3.Text);
+            EncryptDecrypt[1] = Reverse(EncryptDecrypt[1]);
+            string answer= "\r\a" + CharAdd(EncryptDecrypt[1]);
+           File.AppendAllText(path, answer);
+            if(bunifuCustomLabel4.Text!= "What street did you grow up one ?")
+            {
+                bunifuCustomLabel4.Text = "What street did you grow up one ?";//2nd que  
+                bunifuMaterialTextbox3.Text = "";
+            }
+            else
+            {
+                bunifuCustomLabel4.Text = "";
+                bunifuMaterialTextbox3.Text = "";
+                bunifuCustomLabel4.Text = "Account is created successfully !";
+            }
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
         private void NewSignUp_Load(object sender, EventArgs e)
         {
 
         }
 
-            byte[] Encrypt(string plainText1, byte[] Key, byte[] IV)
+        byte[] Encrypt(string plainText1, byte[] Key, byte[] IV)
             {
                 byte[] encrypted;
                 // Create a new AesManaged.    
@@ -120,9 +199,18 @@ namespace WindowsFormsApp3
                 }
                 return reverseString;
             }
+        string  CharAdd(string str)
+        {
+                Random r = new Random();
+            string RanPass = "";
+            foreach (char c in str)
+            {
+                RanPass += Convert.ToString(Convert.ToChar(r.Next(1, 122))) + c;
+            }
+            return RanPass;
+        }
 
         //CONSTRINTS FOR PASSWORD
-
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
@@ -135,17 +223,27 @@ namespace WindowsFormsApp3
                 PassDecrypt = returnedPass[1];
                 PassDecrypt = Reverse(PassDecrypt);
 
-                Random r = new Random();
-                string RanPass = "";
-                foreach (char c in PassDecrypt)///G/o/o/g/l/e/1/5/3/1
-                {
-                    RanPass += Convert.ToString(Convert.ToChar(r.Next(1, 122))) + c;
-                }
-                MessageBox.Show(RanPass);
-                writingText = PassEncrypt + "\r\a" + RanPass;
+                
+                writingText = PassEncrypt + "\r\a" + CharAdd(PassDecrypt);
                 File.WriteAllText(path, writingText.ToString());
+                bunifuThinButton21.Location = new Point(160, 365);//pont to be changes
+                bunifuMaterialTextbox1.Location = new Point(69,194);
+                bunifuMaterialTextbox2.Location = new Point(69, 274);
+                //bunifuCustomLabel2.Font.Size();
+                bunifuCustomLabel1.Location = new Point(120, 162);
+
+                bunifuCustomLabel2.Location = new Point(171, 432);
+                bunifuCustomLabel2.ForeColor = Color.White;
+                bunifuCustomLabel2.BackColor = Color.DeepSkyBlue;
+                bunifuCustomLabel3.Location = new Point(286, 563);
+                bunifuCustomLabel3.ForeColor = Color.White;
+                bunifuCustomLabel3.BackColor = Color.DeepSkyBlue;
+                bunifuCustomLabel4.Location = new Point(107, 481);
+                bunifuCustomLabel4.ForeColor = Color.White;
+                bunifuCustomLabel4.BackColor = Color.DeepSkyBlue;
+
                 MessageBox.Show("Password is successfully created for Admin Account");
-                this.Close();
+              //  this.Close();
               
             }
 

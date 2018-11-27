@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp3
@@ -16,41 +9,53 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void label5_Click_1(object sender, EventArgs e)
         {
-            //this.BackgroundImage = Properties.Resources.Transparent_Btn;
-
-            Form2 ManageYourPasswords = new Form2();
-            ManageYourPasswords.Show();
+            this.Hide();
+            LoginPage redirect = new LoginPage();
+            redirect.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        {
+            this.Close();
             Form3 GenerateRandomPassword = new Form3();
             GenerateRandomPassword.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void bunifuThinButton24_Click(object sender, EventArgs e)
         {
+            this.Close();
+            Form2 ManageYourPasswords = new Form2();
+            ManageYourPasswords.Show();
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            this.Close();
             Form5 GenerateRandomPassword = new Form5();
             GenerateRandomPassword.Show();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
+        private void bunifuThinButton23_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This Application Is Published By ::\n       ::Hemalatha::      \n::All Rights Reserved::");
             ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
-            ToolTip1.SetToolTip(this.button5, "Button Info");
+            ToolTip1.SetToolTip(this.bunifuThinButton23, "Button Info");
 
             About nsns = new About();
             nsns.Show();
         }
 
- 
+        private void bunifuThinButton25_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
     }
 }

@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Threading;
-
-
 
 namespace WindowsFormsApp3
 {
@@ -28,9 +20,6 @@ namespace WindowsFormsApp3
         {
             backgroundWorker1.WorkerReportsProgress = true;
             backgroundWorker1.RunWorkerAsync();
-        }
-        private void label1_Click(object sender, EventArgs e)
-        {
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -64,7 +53,7 @@ namespace WindowsFormsApp3
             int bonus_LowerConse = -IsLowerConsequtive(password) * 2;
             bonus = bonus_Characters + bonus_Uppercase + bonus_Lowercase + bonus_Numbers + bonus_Symbol + bonus_MiddleNumbers + bonus_MiddleSymbols + bonus_LettersOnly + bonus_DigitOnly + bonus_Repeated + bonus_UpperConse;
 
-          // MessageBox.Show("NOC :" + bonus_Characters + "\n UL :" + bonus_Uppercase + "\n LL :" + bonus_Lowercase + "\n  N :" + bonus_Numbers + "\n  Sy:" + bonus_Symbol + "\n  MiNu:" + bonus_MiddleNumbers + "\n MSy" + bonus_MiddleSymbols);
+           // MessageBox.Show("NOC :" + bonus_Characters + "\n UL :" + bonus_Uppercase + "\n LL :" + bonus_Lowercase + "\n  N :" + bonus_Numbers + "\n  Sy:" + bonus_Symbol + "\n  MiNu:" + bonus_MiddleNumbers + "\n MSy" + bonus_MiddleSymbols);
 
             if (bonus > 100)
             {
@@ -266,20 +255,8 @@ namespace WindowsFormsApp3
         private void backgroundWorker1_ProgresssChange(object sender, ProgressChangedEventArgs e)
         {
             // Change the value of the ProgressBar
-
         progressBar1.Value = e.ProgressPercentage;
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
@@ -292,18 +269,20 @@ namespace WindowsFormsApp3
             }
 
         }
-
-        private void Form5_Load_1(object sender, EventArgs e)
-        {
-
-        }
         private void button3_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
-        private void label5_Click(object sender, EventArgs e)
+        private void label5_Click_1(object sender, EventArgs e)
         {
             this.Close();
+            Form1 redirect = new Form1();
+            redirect.ShowDialog();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

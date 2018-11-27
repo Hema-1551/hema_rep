@@ -5,14 +5,27 @@ namespace WindowsFormsApp3
 {
     public partial class Form3 : Form
     {
-      String alphabetUpper, specialChars, Pwd, genNum, alphabetLower = String.Empty;
+        String alphabetUpper, specialChars, Pwd, genNum, alphabetLower = String.Empty;
         int LengthPass;
         public Form3()
         {
             InitializeComponent();
         }
-
         Random random = new Random();
+
+
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form1 redirect = new Form1();
+            redirect.ShowDialog();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
 
         private void Form3_Load(object sender, EventArgs e)
         {
@@ -20,11 +33,24 @@ namespace WindowsFormsApp3
             checkBox3.Checked = true;
         }
 
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            string t = textBox2.Text;
+            foreach( char ch in t)
+            {
+                if (Char.IsDigit(ch))
+                {
+                }
+                else
+                {
+                    MessageBox.Show("Length must be in Numerics");
+                }
+            }
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             genNum = string.Empty; alphabetLower = string.Empty; alphabetUpper = string.Empty; specialChars = string.Empty; Pwd =string.Empty;
@@ -33,6 +59,8 @@ namespace WindowsFormsApp3
             String GenNumbers(int min, int max)
             {
                 genNum = Convert.ToString(random.Next(min, max));
+
+
                 return genNum;
             }
             //Generate Capitals Function
@@ -46,6 +74,7 @@ namespace WindowsFormsApp3
             {
                 alphabetLower = Convert.ToString(Convert.ToChar(random.Next(min, max)));
                 return alphabetLower;
+
             }
             //Generate Special Function
             String GenSpecialChars(int min, int max)
@@ -336,10 +365,11 @@ namespace WindowsFormsApp3
                                 break;
                         }
                     }
-
-                    break;
+                   break;
             }
+
             Pwd = firstchara + latterPass;
+            
             if (Convert.ToBoolean(LengthPass))
             {
                 Form4 GeneratedPassword = new Form4(Pwd);

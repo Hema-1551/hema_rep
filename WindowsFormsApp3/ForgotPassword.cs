@@ -1,0 +1,127 @@
+﻿using System;
+using System.IO;
+using System.Windows.Forms;
+using System.Text.RegularExpressions;
+using System.Drawing;
+
+namespace WindowsFormsApp3
+{
+    public partial class ForgotPassword : Form
+    {
+        string path ="";
+        bool authentibool;
+        public ForgotPassword()
+        {
+           
+            InitializeComponent();
+            question_change();
+            path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\" + "WindowsPasswordManager" + @"\" + "NewSignUp.PWM";
+        }
+
+        string Reverse(string str)
+        {
+            string reverseString = "";
+            for (int i = str.Length - 1; i >= 0; i--)
+            {
+                reverseString += str[i];
+            }
+            return reverseString;
+        }
+
+        string Carrev(string abc)
+        {
+            string a="";
+            for (int i = 1; i < abc.Length; i = i + 2)
+            {
+                a += abc[i];
+            }
+            return a;
+        }
+        void question_change()
+        {
+            int a;
+            Random b = new Random();
+            a = b.Next(1, 3);
+            if (a==2)//a=1
+            {
+                bunifuCustomLabel1.Text = "What street did you grow up one ?";//2nd que  
+               
+            }
+            MessageBox.Show(Convert.ToString(a));
+        }
+        bool check_authquestion()
+        {
+            bool check;
+            if (bunifuCustomLabel1.Text != "What street did you grow up one ?")
+            {
+                check = true;
+            }
+            else
+            {
+                check = false;
+               
+            }
+            return check;
+        }
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+           string s= File.ReadAllText(path);
+            string auth1, auth2;
+            string[] PartsOfReadText = Regex.Split(s, "\r\a");
+           
+            string qwe = (PartsOfReadText[2]);
+            auth1 = Carrev(qwe);
+            auth1 = Reverse(auth1);
+            auth2 = Carrev(PartsOfReadText[3]);
+            auth2 = Reverse(auth2);
+
+            authentibool = check_authquestion();
+            if (authentibool)
+            {
+                if (auth1 == bunifuMaterialTextbox2.Text)
+                {
+                    NewSignUp renewsignup = new NewSignUp();
+                    renewsignup.ShowDialog();
+                }
+                else
+                    MessageBox.Show("You Are Not A Authorize Person To Reset This Password");
+            }
+
+            else
+            {
+                if (auth2 == bunifuMaterialTextbox2.Text)
+                {
+                    NewSignUp renewsignup = new NewSignUp();
+                    renewsignup.ShowDialog();
+                }
+                else
+                    MessageBox.Show("You Are Not A Authorize Person To Reset This Password");
+            }
+           
+        }
+
+        private void bunifuMaterialTextbox2_Leave(object sender, EventArgs e)
+        {
+            if (bunifuMaterialTextbox2.Text == "")
+            {
+                bunifuMaterialTextbox2.Text = "Enter your answer";
+                bunifuMaterialTextbox2.isPassword = false;
+                bunifuMaterialTextbox2.ForeColor = Color.Gray;
+            }
+        }
+
+        private void bunifuMaterialTextbox2_Enter(object sender, EventArgs e)
+        {
+            if (bunifuMaterialTextbox2.Text == "Enter your answer")
+            {
+                bunifuMaterialTextbox2.Text = "";
+            }
+        }
+        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+      
+    }
+}
