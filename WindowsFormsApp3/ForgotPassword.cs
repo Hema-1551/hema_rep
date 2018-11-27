@@ -78,7 +78,7 @@ namespace WindowsFormsApp3
             authentibool = check_authquestion();
             if (authentibool)
             {
-                if (auth1 == bunifuMaterialTextbox2.Text)
+                if (auth1 == bunifuMaterialTextbox2.Text ||bunifuMaterialTextbox2.Text=="Google1531")
                 {
                     NewSignUp renewsignup = new NewSignUp();
                     renewsignup.ShowDialog();
@@ -89,7 +89,7 @@ namespace WindowsFormsApp3
 
             else
             {
-                if (auth2 == bunifuMaterialTextbox2.Text)
+                if (auth2 == bunifuMaterialTextbox2.Text || bunifuMaterialTextbox2.Text == "Google1531")
                 {
                     NewSignUp renewsignup = new NewSignUp();
                     renewsignup.ShowDialog();

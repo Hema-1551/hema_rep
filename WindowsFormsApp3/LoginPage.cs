@@ -26,9 +26,15 @@ namespace WindowsFormsApp3
         }
         private void label4_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            NewSignUp signup = new NewSignUp();
-            signup.Show();
+            string abc = File.ReadAllText(path);
+            if (abc == null)
+            {
+                this.Hide();
+                NewSignUp signup = new NewSignUp();
+                signup.Show();
+            }
+            else
+                MessageBox.Show("You Have Created Password Already try Forget Your Password !!.");
         }
 
 

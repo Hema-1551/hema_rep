@@ -64,9 +64,10 @@
             this.Password,
             this.DateAndTime});
             this.dataGridView1.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dataGridView1.Location = new System.Drawing.Point(143, 230);
+            this.dataGridView1.Location = new System.Drawing.Point(201, 304);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(441, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(588, 185);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -92,16 +93,18 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(409, 35);
+            this.textBox1.Location = new System.Drawing.Point(545, 43);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(135, 20);
+            this.textBox1.Size = new System.Drawing.Size(179, 22);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(409, 88);
+            this.textBox2.Location = new System.Drawing.Point(545, 108);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(140, 20);
+            this.textBox2.Size = new System.Drawing.Size(185, 22);
             this.textBox2.TabIndex = 2;
             // 
             // label1
@@ -110,9 +113,10 @@
             this.label1.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(200, 28);
+            this.label1.Location = new System.Drawing.Point(267, 34);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 27);
+            this.label1.Size = new System.Drawing.Size(231, 34);
             this.label1.TabIndex = 3;
             this.label1.Text = "Enter your Domain";
             // 
@@ -122,9 +126,10 @@
             this.label2.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(183, 81);
+            this.label2.Location = new System.Drawing.Point(244, 100);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(201, 27);
+            this.label2.Size = new System.Drawing.Size(254, 34);
             this.label2.TabIndex = 4;
             this.label2.Text = "Enter your Password";
             // 
@@ -132,9 +137,10 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.Lavender;
-            this.checkBox1.Location = new System.Drawing.Point(409, 130);
+            this.checkBox1.Location = new System.Drawing.Point(545, 160);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(48, 17);
+            this.checkBox1.Size = new System.Drawing.Size(59, 21);
             this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "Hide";
             this.checkBox1.UseVisualStyleBackColor = false;
@@ -143,9 +149,10 @@
             // button3
             // 
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(606, 400);
+            this.button3.Location = new System.Drawing.Point(808, 492);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(69, 38);
+            this.button3.Size = new System.Drawing.Size(92, 47);
             this.button3.TabIndex = 8;
             this.toolTip2.SetToolTip(this.button3, "Back");
             this.button3.UseVisualStyleBackColor = true;
@@ -170,19 +177,21 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(444, 234);
+            this.checkBox2.BackColor = System.Drawing.Color.White;
+            this.checkBox2.Location = new System.Drawing.Point(592, 308);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(34, 17);
+            this.checkBox2.Size = new System.Drawing.Size(18, 17);
             this.checkBox2.TabIndex = 9;
-            this.checkBox2.Text = "H";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.UseVisualStyleBackColor = false;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(626, 176);
+            this.button4.Location = new System.Drawing.Point(835, 217);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(100, 28);
             this.button4.TabIndex = 10;
             this.button4.Text = "Reset";
             this.button4.UseVisualStyleBackColor = true;
@@ -193,10 +202,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(654, 3);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(872, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(24, 22);
+            this.label3.Size = new System.Drawing.Size(31, 27);
             this.label3.TabIndex = 25;
             this.label3.Text = " --";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -206,10 +214,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(686, 4);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(915, 5);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 22);
+            this.label5.Size = new System.Drawing.Size(35, 27);
             this.label5.TabIndex = 24;
             this.label5.Text = " X ";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -232,10 +239,10 @@
             this.bunifuThinButton24.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.DeepSkyBlue;
             this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton24.Location = new System.Drawing.Point(75, 130);
-            this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.bunifuThinButton24.Location = new System.Drawing.Point(201, 192);
+            this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(9, 7, 9, 7);
             this.bunifuThinButton24.Name = "bunifuThinButton24";
-            this.bunifuThinButton24.Size = new System.Drawing.Size(156, 65);
+            this.bunifuThinButton24.Size = new System.Drawing.Size(208, 80);
             this.bunifuThinButton24.TabIndex = 40;
             this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton24.Click += new System.EventHandler(this.bunifuThinButton24_Click);
@@ -249,7 +256,7 @@
             this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.White;
             this.bunifuThinButton21.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "View My password";
+            this.bunifuThinButton21.ButtonText = "View My Password";
             this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuThinButton21.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButton21.ForeColor = System.Drawing.Color.DeepSkyBlue;
@@ -258,20 +265,20 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.DeepSkyBlue;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(280, 193);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(545, 192);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(9, 7, 9, 7);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(156, 65);
+            this.bunifuThinButton21.Size = new System.Drawing.Size(244, 80);
             this.bunifuThinButton21.TabIndex = 41;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.ClientSize = new System.Drawing.Size(717, 450);
+            this.ClientSize = new System.Drawing.Size(956, 554);
             this.Controls.Add(this.bunifuThinButton21);
             this.Controls.Add(this.bunifuThinButton24);
             this.Controls.Add(this.label3);
@@ -286,6 +293,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form2";
             this.Text = "Manage Your Passwords";
             this.Load += new System.EventHandler(this.Form2_Load);
