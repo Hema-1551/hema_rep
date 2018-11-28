@@ -12,10 +12,9 @@ namespace WindowsFormsApp3
         string path = "", password = "", decrypted, PassEncrypt, PassDecrypt ,writingText= ""; byte[] encrypted;
 
         AesManaged aes = new AesManaged();
-
         private void label5_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             LoginPage redirect = new LoginPage();
             redirect.ShowDialog();
         }
@@ -28,6 +27,10 @@ namespace WindowsFormsApp3
         private void bunifuMaterialTextbox2_OnValueChanged(object sender, EventArgs e)
         {
             bunifuMaterialTextbox2.isPassword = true;
+        }
+        private void bunifuMaterialTextbox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            bunifuThinButton21_Click(sender, e);
         }
         private void bunifuMaterialTextbox1_Leave(object sender, EventArgs e)
         {
@@ -124,6 +127,9 @@ namespace WindowsFormsApp3
                 bunifuCustomLabel4.Text = "";
                 bunifuMaterialTextbox3.Text = "";
                 bunifuCustomLabel4.Text = "Account is created successfully !";
+                this.Close();
+                LoginPage redirect = new LoginPage();
+                redirect.ShowDialog();
             }
 
         }

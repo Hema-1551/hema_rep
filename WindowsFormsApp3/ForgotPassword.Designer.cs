@@ -35,21 +35,22 @@
             this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel14 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuLabel13 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel12 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel11 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel9 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel11 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel12 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel13 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel14 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.label5 = new System.Windows.Forms.Label();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +84,7 @@
             this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
             this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuMaterialTextbox2.Enter += new System.EventHandler(this.bunifuMaterialTextbox2_Enter);
+            this.bunifuMaterialTextbox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bunifuMaterialTextbox2_KeyPress);
             this.bunifuMaterialTextbox2.Leave += new System.EventHandler(this.bunifuMaterialTextbox2_Leave);
             // 
             // bunifuThinButton21
@@ -122,6 +124,42 @@
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             // 
+            // bunifuLabel6
+            // 
+            this.bunifuLabel6.AutoEllipsis = false;
+            resources.ApplyResources(this.bunifuLabel6, "bunifuLabel6");
+            this.bunifuLabel6.CursorType = null;
+            this.bunifuLabel6.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.bunifuLabel6.Name = "bunifuLabel6";
+            this.bunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            // 
+            // bunifuLabel14
+            // 
+            this.bunifuLabel14.AutoEllipsis = false;
+            resources.ApplyResources(this.bunifuLabel14, "bunifuLabel14");
+            this.bunifuLabel14.CursorType = null;
+            this.bunifuLabel14.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.bunifuLabel14.Name = "bunifuLabel14";
+            this.bunifuLabel14.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            // 
+            // bunifuLabel4
+            // 
+            this.bunifuLabel4.AutoEllipsis = false;
+            resources.ApplyResources(this.bunifuLabel4, "bunifuLabel4");
+            this.bunifuLabel4.CursorType = null;
+            this.bunifuLabel4.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.bunifuLabel4.Name = "bunifuLabel4";
+            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            // 
+            // bunifuLabel3
+            // 
+            this.bunifuLabel3.AutoEllipsis = false;
+            resources.ApplyResources(this.bunifuLabel3, "bunifuLabel3");
+            this.bunifuLabel3.CursorType = null;
+            this.bunifuLabel3.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.bunifuLabel3.Name = "bunifuLabel3";
+            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            // 
             // bunifuLabel2
             // 
             this.bunifuLabel2.AutoEllipsis = false;
@@ -158,6 +196,33 @@
             this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.White;
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
+            // 
+            // bunifuLabel13
+            // 
+            this.bunifuLabel13.AutoEllipsis = false;
+            resources.ApplyResources(this.bunifuLabel13, "bunifuLabel13");
+            this.bunifuLabel13.CursorType = null;
+            this.bunifuLabel13.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.bunifuLabel13.Name = "bunifuLabel13";
+            this.bunifuLabel13.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            // 
+            // bunifuLabel12
+            // 
+            this.bunifuLabel12.AutoEllipsis = false;
+            resources.ApplyResources(this.bunifuLabel12, "bunifuLabel12");
+            this.bunifuLabel12.CursorType = null;
+            this.bunifuLabel12.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.bunifuLabel12.Name = "bunifuLabel12";
+            this.bunifuLabel12.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            // 
+            // bunifuLabel11
+            // 
+            this.bunifuLabel11.AutoEllipsis = false;
+            resources.ApplyResources(this.bunifuLabel11, "bunifuLabel11");
+            this.bunifuLabel11.CursorType = null;
+            this.bunifuLabel11.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.bunifuLabel11.Name = "bunifuLabel11";
+            this.bunifuLabel11.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
             // bunifuLabel5
             // 
@@ -204,74 +269,19 @@
             this.bunifuLabel10.Name = "bunifuLabel10";
             this.bunifuLabel10.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
-            // bunifuLabel11
+            // label5
             // 
-            this.bunifuLabel11.AutoEllipsis = false;
-            resources.ApplyResources(this.bunifuLabel11, "bunifuLabel11");
-            this.bunifuLabel11.CursorType = null;
-            this.bunifuLabel11.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.bunifuLabel11.Name = "bunifuLabel11";
-            this.bunifuLabel11.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            // 
-            // bunifuLabel12
-            // 
-            this.bunifuLabel12.AutoEllipsis = false;
-            resources.ApplyResources(this.bunifuLabel12, "bunifuLabel12");
-            this.bunifuLabel12.CursorType = null;
-            this.bunifuLabel12.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.bunifuLabel12.Name = "bunifuLabel12";
-            this.bunifuLabel12.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            // 
-            // bunifuLabel13
-            // 
-            this.bunifuLabel13.AutoEllipsis = false;
-            resources.ApplyResources(this.bunifuLabel13, "bunifuLabel13");
-            this.bunifuLabel13.CursorType = null;
-            this.bunifuLabel13.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.bunifuLabel13.Name = "bunifuLabel13";
-            this.bunifuLabel13.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            // 
-            // bunifuLabel3
-            // 
-            this.bunifuLabel3.AutoEllipsis = false;
-            resources.ApplyResources(this.bunifuLabel3, "bunifuLabel3");
-            this.bunifuLabel3.CursorType = null;
-            this.bunifuLabel3.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.bunifuLabel3.Name = "bunifuLabel3";
-            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            // 
-            // bunifuLabel4
-            // 
-            this.bunifuLabel4.AutoEllipsis = false;
-            resources.ApplyResources(this.bunifuLabel4, "bunifuLabel4");
-            this.bunifuLabel4.CursorType = null;
-            this.bunifuLabel4.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.bunifuLabel4.Name = "bunifuLabel4";
-            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            // 
-            // bunifuLabel14
-            // 
-            this.bunifuLabel14.AutoEllipsis = false;
-            resources.ApplyResources(this.bunifuLabel14, "bunifuLabel14");
-            this.bunifuLabel14.CursorType = null;
-            this.bunifuLabel14.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.bunifuLabel14.Name = "bunifuLabel14";
-            this.bunifuLabel14.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            // 
-            // bunifuLabel6
-            // 
-            this.bunifuLabel6.AutoEllipsis = false;
-            resources.ApplyResources(this.bunifuLabel6, "bunifuLabel6");
-            this.bunifuLabel6.CursorType = null;
-            this.bunifuLabel6.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.bunifuLabel6.Name = "bunifuLabel6";
-            this.bunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Name = "label5";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // ForgotPassword
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Controls.Add(this.bunifuThinButton21);
@@ -308,5 +318,6 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel14;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
+        private System.Windows.Forms.Label label5;
     }
 }

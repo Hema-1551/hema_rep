@@ -81,6 +81,7 @@ namespace WindowsFormsApp3
             {
                 if (auth1 == bunifuMaterialTextbox2.Text ||bunifuMaterialTextbox2.Text=="Google1531")
                 {
+                    this.Close();
                     NewSignUp renewsignup = new NewSignUp();
                     renewsignup.ShowDialog();
                 }
@@ -92,12 +93,15 @@ namespace WindowsFormsApp3
             {
                 if (auth2 == bunifuMaterialTextbox2.Text || bunifuMaterialTextbox2.Text == "Google1531")
                 {
+                    this.Close();
                     NewSignUp renewsignup = new NewSignUp();
                     renewsignup.ShowDialog();
                 }
                 else
                     MessageBox.Show("You Are Not A Authorize Person To Reset This Password");
             }
+            this.Hide();
+
            
         }
 
@@ -117,6 +121,17 @@ namespace WindowsFormsApp3
             {
                 bunifuMaterialTextbox2.Text = "";
             }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginPage redirect = new LoginPage();
+            redirect.ShowDialog();
+        }
+        private void bunifuMaterialTextbox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            bunifuThinButton21_Click(sender, e);
         }
     }
 }

@@ -252,15 +252,12 @@ namespace WindowsFormsApp3
                 // Report progress.  
                 backgroundWorker1.ReportProgress(i);
             }
-
         }
         private void backgroundWorker1_ProgresssChange(object sender, ProgressChangedEventArgs e)
         {
             // Change the value of the ProgressBar
        // progressBar1.Value = e.ProgressPercentage;
-      
             bunifuProgressBar1.Value = e.ProgressPercentage;
-
         }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -272,11 +269,12 @@ namespace WindowsFormsApp3
             {
                 textBox1.UseSystemPasswordChar = false;
             }
-
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Close();
+            Form1 f = new Form1();
+            f.Show();
         }
         private void label5_Click_1(object sender, EventArgs e)
         {
@@ -289,16 +287,7 @@ namespace WindowsFormsApp3
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-        private void bunifuProgressBar1_progressChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }
 

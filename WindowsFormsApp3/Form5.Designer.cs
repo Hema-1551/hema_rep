@@ -53,9 +53,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(58, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 27);
+            this.label1.Size = new System.Drawing.Size(169, 27);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Enter Password";
+            this.label1.Text = "Enter Password :";
             // 
             // textBox1
             // 
@@ -83,7 +83,6 @@
             this.label2.Size = new System.Drawing.Size(25, 15);
             this.label2.TabIndex = 5;
             this.label2.Text = "0%";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -92,16 +91,16 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(131, 208);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 27);
+            this.label3.Size = new System.Drawing.Size(127, 27);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Complexity";
+            this.label3.Text = "Complexity :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(302, 208);
+            this.label4.Location = new System.Drawing.Point(298, 211);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 27);
             this.label4.TabIndex = 7;
@@ -111,7 +110,7 @@
             // 
             this.checkBox1.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(294, 103);
+            this.checkBox1.Location = new System.Drawing.Point(266, 107);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(63, 24);
             this.checkBox1.TabIndex = 8;
@@ -123,9 +122,9 @@
             // button3
             // 
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(435, 252);
+            this.button3.Location = new System.Drawing.Point(426, 252);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(53, 37);
+            this.button3.Size = new System.Drawing.Size(62, 37);
             this.button3.TabIndex = 9;
             this.toolTip1.SetToolTip(this.button3, "Back");
             this.button3.UseVisualStyleBackColor = true;
@@ -179,7 +178,6 @@
             this.bunifuProgressBar1.Size = new System.Drawing.Size(262, 35);
             this.bunifuProgressBar1.TabIndex = 32;
             this.bunifuProgressBar1.Value = 0;
-            this.bunifuProgressBar1.progressChanged += new System.EventHandler(this.bunifuProgressBar1_progressChanged);
             // 
             // Form5
             // 

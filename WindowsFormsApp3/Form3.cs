@@ -373,16 +373,20 @@ namespace WindowsFormsApp3
             }
         }
 
+        private void radioButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void Form3_Load(object sender, EventArgs e)
         {
             radioButton1.Checked = true;
             checkBox3.Checked = true;
         }
-
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             string t = textBox2.Text;
-            foreach( char ch in t)
+            foreach (char ch in t)
             {
                 if (Char.IsDigit(ch))
                 {
@@ -393,9 +397,16 @@ namespace WindowsFormsApp3
                 }
             }
         }
+        private void Textbox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            radioButton1_Click(sender, e);
+        }
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Close();
+            Form1 returntoForm1 = new Form1();
+            returntoForm1.Show();
         }
     }
+
 }

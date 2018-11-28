@@ -12,9 +12,7 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
             path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)+ @"\" + "WindowsPasswordManager"+@"\" + "NewSignUp.PWM";
-
         }
-
         string Reverse(string str)
         {
             string reverseString = "";
@@ -26,7 +24,6 @@ namespace WindowsFormsApp3
         }
         private void label4_Click(object sender, EventArgs e)
         {
-         //  string abc = File.ReadAllText(path);
             if (!File.Exists(path))
             {
                 this.Hide();
@@ -36,19 +33,12 @@ namespace WindowsFormsApp3
             else
                 MessageBox.Show("You Have Created Password Already try Forget Your Password !!.");
         }
-
-
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            //Futuree Implementation
             string pa = "", Authentication="", readalltext = "";
             readalltext = File.ReadAllText(path);
-
             string[] PartsOfReadText = Regex.Split(readalltext, "\r\a");
-
-            //   writingText =Length + PassEncrypt  + RanPass;
-
-            string qwe = (PartsOfReadText[1]);
+           string qwe = (PartsOfReadText[1]);
             for (int i = 1; i < PartsOfReadText[1].Length; i = i + 2)
             {
                 pa += qwe[i];
@@ -113,6 +103,11 @@ namespace WindowsFormsApp3
         private void label2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void LoginPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

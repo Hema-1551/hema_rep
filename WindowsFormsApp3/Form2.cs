@@ -3,6 +3,8 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Drawing;
+
 
 namespace WindowsFormsApp3
 {
@@ -113,7 +115,9 @@ namespace WindowsFormsApp3
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Close();
+            Form1 re = new Form1();
+            re.ShowDialog();
         }
         
         string[] abc = new string[9];
@@ -134,10 +138,12 @@ namespace WindowsFormsApp3
         {
 
         }
-
+        
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            slno = 0;
+            slno = 1;
+            bunifuCustomDataGrid1.ForeColor = Color.Black;
+
             bunifuCustomDataGrid1.Rows.Clear();
             Retrievedata = File.ReadAllText(path);
             string LengthsData = File.ReadAllText(Lengthpath);
@@ -165,7 +171,6 @@ namespace WindowsFormsApp3
 
         private void bunifuThinButton24_Click(object sender, EventArgs e)
         {
-
             string a = textBox1.Text, b = textBox2.Text;
             string[] finalA, finalB, finalDate1;
             string finalText = "";
@@ -193,6 +198,8 @@ namespace WindowsFormsApp3
                 finalText = finalD_encrypted + finalD_decrypted + finalBencrypted + finalBdecrypted + finalAencrypt + finalAdecrypt + "\r\n";
                 finalLength = Convert.ToString(finalD_encrypted.Length) + "\t" + finalD_decrypted.Length + "\t" + finalBencrypted.Length + "\t" + finalBdecrypted.Length + "\t" + finalAencrypt.Length + "\t" + finalAdecrypt.Length + "\a\b";
                 // MessageBox.Show(finalText);
+                textBox1.Text = null;
+                textBox2.Text = null;
             }
             else
             {
@@ -259,6 +266,11 @@ namespace WindowsFormsApp3
             File.WriteAllText(Lengthpath, String.Empty);
 
         }
+        private void Textbox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            bunifuThinButton24_Click(sender, e);
+        }
+
         private int CountStringOccurrences(string text, string pattern)//CCCCCCCCCCCCCCCCCCCCCCC
         {
             // Loop through all instances of the string 'text'.
@@ -331,7 +343,7 @@ namespace WindowsFormsApp3
         }
         int slno = 0;
 
-        
+      
     }
 }
 
