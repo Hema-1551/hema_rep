@@ -83,8 +83,6 @@
             this.bunifuMaterialTextbox2.MaxLength = 32767;
             this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
             this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuMaterialTextbox2.Enter += new System.EventHandler(this.bunifuMaterialTextbox2_Enter);
-            this.bunifuMaterialTextbox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bunifuMaterialTextbox2_KeyPress);
             this.bunifuMaterialTextbox2.Leave += new System.EventHandler(this.bunifuMaterialTextbox2_Leave);
             // 
             // bunifuThinButton21

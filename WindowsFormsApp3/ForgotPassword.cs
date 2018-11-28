@@ -47,7 +47,7 @@ namespace WindowsFormsApp3
                 bunifuCustomLabel1.Text = "What street did you grow up one ?";//2nd que  
                
             }
-            MessageBox.Show(Convert.ToString(a));
+          
         }
         bool check_authquestion()
         {
@@ -68,7 +68,7 @@ namespace WindowsFormsApp3
            string s= File.ReadAllText(path);
             string auth1, auth2;
             string[] PartsOfReadText = Regex.Split(s, "\r\a");
-            MessageBox.Show(PartsOfReadText[0]+ PartsOfReadText[1]+ PartsOfReadText[2]+ PartsOfReadText[3]);
+          
             string qwe = (PartsOfReadText[2]);
            
             auth1 = Carrev(qwe);
@@ -114,14 +114,7 @@ namespace WindowsFormsApp3
                 bunifuMaterialTextbox2.ForeColor = Color.Gray;
             }
         }
-
-        private void bunifuMaterialTextbox2_Enter(object sender, EventArgs e)
-        {
-            if (bunifuMaterialTextbox2.Text == "Enter your answer")
-            {
-                bunifuMaterialTextbox2.Text = "";
-            }
-        }
+        
 
         private void label5_Click(object sender, EventArgs e)
         {
@@ -129,9 +122,6 @@ namespace WindowsFormsApp3
             LoginPage redirect = new LoginPage();
             redirect.ShowDialog();
         }
-        private void bunifuMaterialTextbox2_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            bunifuThinButton21_Click(sender, e);
-        }
+      
     }
 }
