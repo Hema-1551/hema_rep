@@ -268,6 +268,7 @@ namespace WindowsFormsApp3
         }
         private void Textbox2_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if(e.KeyChar==13)
             bunifuThinButton24_Click(sender, e);
         }
 

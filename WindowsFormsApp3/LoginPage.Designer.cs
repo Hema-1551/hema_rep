@@ -244,7 +244,7 @@
             this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.White;
             this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Black;
             this.bunifuMaterialTextbox1.LineThickness = 5;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(145, 205);
+            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(133, 205);
             this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuMaterialTextbox1.MaxLength = 32767;
             this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
@@ -328,7 +328,6 @@
             this.Name = "LoginPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginPage";
-            this.Load += new System.EventHandler(this.LoginPage_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.ResumeLayout(false);

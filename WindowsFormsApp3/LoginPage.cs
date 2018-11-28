@@ -11,7 +11,7 @@ namespace WindowsFormsApp3
         public LoginPage()
         {
             InitializeComponent();
-            path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)+ @"\" + "WindowsPasswordManager"+@"\" + "NewSignUp.PWM";
+            path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\" + "WindowsPasswordManager" + @"\" + "NewSignUp.PWM";
         }
         string Reverse(string str)
         {
@@ -35,10 +35,10 @@ namespace WindowsFormsApp3
         }
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            string pa = "", Authentication="", readalltext = "";
+            string pa = "", Authentication = "", readalltext = "";
             readalltext = File.ReadAllText(path);
             string[] PartsOfReadText = Regex.Split(readalltext, "\r\a");
-           string qwe = (PartsOfReadText[1]);
+            string qwe = (PartsOfReadText[1]);
             for (int i = 1; i < PartsOfReadText[1].Length; i = i + 2)
             {
                 pa += qwe[i];
@@ -53,17 +53,17 @@ namespace WindowsFormsApp3
             }
             else
             {
-                if(bunifuMaterialTextbox1.Text == "")
+                if (bunifuMaterialTextbox1.Text == "")
                 {
                     bunifuMaterialTextbox1.Text = "";
                 }
                 else
-                label6.Text = "*Incorect Password";
+                    label6.Text = "*Incorect Password";
             }
         }
         private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
         {
-                    bunifuMaterialTextbox1.isPassword = true;
+            bunifuMaterialTextbox1.isPassword = true;
         }
 
         private void bunifuMaterialTextbox1_Leave(object sender, EventArgs e)
@@ -97,6 +97,7 @@ namespace WindowsFormsApp3
 
         private void bunifuMaterialTextbox1_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if(e.KeyChar==13)
             bunifuThinButton21_Click(sender, e);
         }
 

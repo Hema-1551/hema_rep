@@ -122,6 +122,11 @@ namespace WindowsFormsApp3
             LoginPage redirect = new LoginPage();
             redirect.ShowDialog();
         }
-      
+
+        private void bunifuMaterialTextbox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                bunifuThinButton21_Click(sender,e);
+        }
     }
 }
