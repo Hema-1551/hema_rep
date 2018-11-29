@@ -9,7 +9,7 @@ namespace WindowsFormsApp3
     public partial class NewSignUp : Form
     {
         private string[] returnedPass= { "1", "2" };
-        string path = "", password = "", decrypted, PassEncrypt, PassDecrypt ,writingText= ""; byte[] encrypted;
+        string path = "", password = "",gmail="", decrypted, PassEncrypt, PassDecrypt ,writingText= ""; byte[] encrypted;
 
         AesManaged aes = new AesManaged();
         private void label5_Click(object sender, EventArgs e)
@@ -139,11 +139,6 @@ namespace WindowsFormsApp3
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void NewSignUp_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void bunifuMaterialTextbox1_OnValueChanged_1(object sender, EventArgs e)
         {
             bunifuMaterialTextbox2.isPassword = true;
@@ -152,6 +147,25 @@ namespace WindowsFormsApp3
         private void bunifuMaterialTextbox2_OnValueChanged_1(object sender, EventArgs e)
         {
             bunifuMaterialTextbox1.isPassword = true;
+        }
+
+        private void bunifuMaterialTextbox4_Enter(object sender, EventArgs e)
+        {
+            if (bunifuMaterialTextbox4.Text == "Enter Your Email")
+            {
+                bunifuMaterialTextbox4.Text = "";
+            }
+        }
+
+        private void bunifuMaterialTextbox4_Leave(object sender, EventArgs e)
+        {
+            if (bunifuMaterialTextbox4.Text == "")
+            {
+                bunifuMaterialTextbox4.Text = "Enter Your Email";
+                bunifuMaterialTextbox4.ForeColor = Color.Gray;
+                bunifuMaterialTextbox4.isPassword = false;
+
+            }
         }
 
         byte[] Encrypt(string plainText1, byte[] Key, byte[] IV)
@@ -230,15 +244,17 @@ namespace WindowsFormsApp3
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            if (bunifuMaterialTextbox1.Text == bunifuMaterialTextbox2.Text)
+            if (bunifuMaterialTextbox1.Text == bunifuMaterialTextbox2.Text&&bunifuMaterialTextbox4.Text!=null)
             {
                 password = bunifuMaterialTextbox2.Text;
-
+                gmail = bunifuMaterialTextbox4.Text;
+                gmail = CharAdd(Reverse(bunifuMaterialTextbox4.Text));
+                MessageBox.Show(gmail);
                 returnedPass = EncryptAesManaged(password);
                 PassEncrypt = returnedPass[0];
                 PassDecrypt = returnedPass[1];
                 PassDecrypt = Reverse(PassDecrypt);
-                writingText = PassEncrypt + "\r\a" + CharAdd(PassDecrypt);
+                writingText = PassEncrypt + "\r\a" + CharAdd(PassDecrypt)+"\r\a"+gmail;
                 File.WriteAllText(path, writingText.ToString());
                 bunifuThinButton21.Location = new Point(160, 365);//pont to be changes
                 bunifuMaterialTextbox1.Location = new Point(69,194);
@@ -255,6 +271,7 @@ namespace WindowsFormsApp3
                 bunifuCustomLabel4.Location = new Point(107, 481);
                 bunifuCustomLabel4.ForeColor = Color.White;
                 bunifuCustomLabel4.BackColor = Color.DeepSkyBlue;
+                //OTP Implementation..
 
                 MessageBox.Show("Password is successfully created for Admin Account");
               //  this.Close();
