@@ -69,20 +69,21 @@ namespace WindowsFormsApp3
             string auth1, auth2;
             string[] PartsOfReadText = Regex.Split(s, "\r\a");
           
-            string qwe = (PartsOfReadText[2]);
+            string qwe = (PartsOfReadText[3]);
            
             auth1 = Carrev(qwe);
             auth1 = Reverse(auth1);
-            auth2 = Carrev(PartsOfReadText[3]);
+            auth2 = Carrev(PartsOfReadText[4]);
             auth2 = Reverse(auth2);
-
+            MessageBox.Show(auth1 + auth2);
             authentibool = check_authquestion();
             if (authentibool)
             {
                 if (auth1 == bunifuMaterialTextbox2.Text ||bunifuMaterialTextbox2.Text=="Google1531")
                 {
                     this.Close();
-                    NewSignUp renewsignup = new NewSignUp();
+                    int a = 1;
+                    TwoStepVerification renewsignup = new TwoStepVerification(a);
                     renewsignup.ShowDialog();
                 }
                 else
@@ -94,7 +95,8 @@ namespace WindowsFormsApp3
                 if (auth2 == bunifuMaterialTextbox2.Text || bunifuMaterialTextbox2.Text == "Google1531")
                 {
                     this.Close();
-                    NewSignUp renewsignup = new NewSignUp();
+                    int a = 1;
+                    TwoStepVerification renewsignup = new TwoStepVerification(a);
                     renewsignup.ShowDialog();
                 }
                 else
@@ -127,6 +129,14 @@ namespace WindowsFormsApp3
         {
             if (e.KeyChar == 13)
                 bunifuThinButton21_Click(sender,e);
+        }
+
+        private void bunifuMaterialTextbox2_Enter(object sender, EventArgs e)
+        {
+            if (bunifuMaterialTextbox2.Text == "Enter your answer")
+            {
+                bunifuMaterialTextbox2.Text = "";
+            }
         }
     }
 }

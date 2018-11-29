@@ -7,11 +7,17 @@ namespace WindowsFormsApp3
 {
     public partial class LoginPage : Form
     {
-        string path = "";
+        string path = "", readalltext = "";
+        string[] PartsOfReadText; string OTP = "";
         public LoginPage()
         {
             InitializeComponent();
             path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\" + "WindowsPasswordManager" + @"\" + "NewSignUp.PWM";
+            readalltext = File.ReadAllText(path);
+            PartsOfReadText = Regex.Split(readalltext, "\r\a");
+            
+
+            
         }
         string Reverse(string str)
         {
@@ -35,20 +41,19 @@ namespace WindowsFormsApp3
         }
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            string pa = "", Authentication = "", readalltext = "";
-            readalltext = File.ReadAllText(path);
-            string[] PartsOfReadText = Regex.Split(readalltext, "\r\a");
-            string qwe = (PartsOfReadText[1]);
+            string pa = "", Authentication = "";
+           string qwe = (PartsOfReadText[1]);
             for (int i = 1; i < PartsOfReadText[1].Length; i = i + 2)
             {
                 pa += qwe[i];
             }
             pa = Reverse(pa);
+            
             Authentication = bunifuMaterialTextbox1.Text;
             if (Authentication == pa)
             {
                 this.Hide();
-                Form1 f1 = new Form1();
+                TwoStepVerification f1 = new TwoStepVerification();
                 f1.Show();
             }
             else
@@ -91,6 +96,7 @@ namespace WindowsFormsApp3
 
         private void label1_Click_2(object sender, EventArgs e)
         {
+            this.Hide();
             ForgotPassword gn = new ForgotPassword();
             gn.Show();
         }
@@ -109,6 +115,12 @@ namespace WindowsFormsApp3
         private void LoginPage_Load(object sender, EventArgs e)
         {
 
+        }
+
+       
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

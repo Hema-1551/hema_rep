@@ -83,7 +83,7 @@
             this.bunifuMaterialTextbox2.MaxLength = 32767;
             this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
             this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuMaterialTextbox2.Enter += new System.EventHandler(this.bunifuThinButton21_Click);
+            this.bunifuMaterialTextbox2.Enter += new System.EventHandler(this.bunifuMaterialTextbox2_Enter);
             this.bunifuMaterialTextbox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bunifuMaterialTextbox2_KeyPress);
             this.bunifuMaterialTextbox2.Leave += new System.EventHandler(this.bunifuMaterialTextbox2_Leave);
             // 
@@ -177,7 +177,6 @@
             this.bunifuLabel1.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
             // bunifuGradientPanel2
             // 
